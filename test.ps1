@@ -3,5 +3,7 @@ Invoke-WebRequest -Uri "https://github.com/nightlynx/furry-adventure/raw/main/OT
 
 powershell.exe start-process -filepath "C:\Agent_Uninstall.exe" -Wait
 wmic product where "Name like '%%ScreenConnect%%'" call uninstall /nointeractive
-powershell.exe start-process -filepath "C:\OT-Testing.MSI /qn"
+powershell.exe start-process -filepath "C:\OT-Testing.MSI /qn" -Wait
 
+Remove-Item "C:\Agent_Uninstall.exe"
+Remove-Item "C:\OT-Testing.MSI"
