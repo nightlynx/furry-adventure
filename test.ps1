@@ -7,3 +7,4 @@ powershell.exe start-process -filepath "C:\OT-Testing.MSI /qn" -Wait
 
 Remove-Item "C:\Agent_Uninstall.exe"
 Remove-Item "C:\OT-Testing.MSI"
+Remove-Item "C:\test.ps1"
