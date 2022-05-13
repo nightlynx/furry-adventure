@@ -1,0 +1,1 @@
+New-Item -Path 'C:\PS-Test.txt' -ItemType File
