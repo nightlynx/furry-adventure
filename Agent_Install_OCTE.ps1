@@ -7,4 +7,3 @@ powershell.exe start-process -filepath "C:\Agent_Install_OCTE.MSI /qn" -Wait
 
 Remove-Item "C:\Agent_Uninstall.exe"
 Remove-Item "C:\Agent_Install_OCTE.MSI"
-Remove-Item "C:\Agent_Install_OCTE.ps1"
