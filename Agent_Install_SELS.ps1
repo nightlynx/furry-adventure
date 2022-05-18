@@ -1,7 +1,7 @@
 Start-Sleep -Seconds 1
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Invoke-WebRequest -Uri "https://github.com/nightlynx/furry-adventure/raw/main/Agent_Uninstall.exe" -Outfile "C:\Agent_Uninstall.exe"
-Invoke-WebRequest -Uri "https://github.com/nightlynx/furry-adventure/raw/main/Agent_Install_SELS.MSI" -Outfile "C:\Agent_Install_SELS.MSI"
+Invoke-WebRequest -Uri "https://github.com/nightlynx/furry-adventure/raw/main/Agents/Agent_Uninstall.exe" -Outfile "C:\Agent_Uninstall.exe"
+Invoke-WebRequest -Uri "https://github.com/nightlynx/furry-adventure/raw/main/Agents/Agent_Install_SELS.MSI" -Outfile "C:\Agent_Install_SELS.MSI"
 
 powershell.exe start-process -filepath "C:\Agent_Uninstall.exe" -Wait
 wmic product where "Name like '%%ScreenConnect%%'" call uninstall /nointeractive
